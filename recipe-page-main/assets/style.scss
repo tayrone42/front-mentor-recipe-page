@@ -25,6 +25,11 @@ main{
     margin: 200px auto;
     background-color: hsl(0, 0%, 100%);
     border-radius: 50px;
+
+    @media(max-width: 1440px){
+        margin: 0;
+        border-radius: 0;
+    }
 }
 
 header{
@@ -32,10 +37,17 @@ header{
     display: flex;
     justify-content: center;
     padding: 80px 40px;
+    @media(max-width: 1440px){
+        padding: 0;
+    }
     img{
-        max-width: 95%;
+        width: 95%;
         margin: 0 auto;
         border-radius: 20px;
+        @media(max-width: 1440px){
+            width: 100%;
+            border-radius: 0;
+        }
     }
 }
 
@@ -44,6 +56,9 @@ header{
     display: flex;
     flex-direction: column;
     gap: 40px;
+    @media(max-width: 600px){
+        padding: 40px;
+    }
     .div-recipe{
         h1{
             font-size: 40px;
@@ -121,6 +136,7 @@ header{
        li{
         span{
             font-weight: 700;
+            margin-left: 10px;
         }
 
         &::marker{
@@ -147,6 +163,9 @@ header{
     table{
         width: 100%;
         padding: 0 40px;
+        @media(max-width: 460px){
+            padding: 0;
+        }
         tr{            
             display: flex;
             justify-content: flex-start;
@@ -154,6 +173,10 @@ header{
             border-bottom: 1px solid hsl(30, 54%, 90%);
             text-align: left;
             padding: 20px;
+            @media(max-width: 600px){
+                width: 100%;
+                justify-content: space-between;
+            }
             
             th{
                 font-size: 18px;
@@ -168,4 +191,18 @@ header{
             }
         }
     }
+}
+
+.attribution{
+    padding: 10px;
+    font-size: 24px;
+    text-align: center;
+    color: hsl(330, 100%, 98%);
+    background-color: hsl(24, 5%, 18%);
+    a{
+        color: hsl(330, 100%, 98%);
+        &:hover{
+            color: hsl(14, 45%, 36%);
+        }
+    }    
 }
